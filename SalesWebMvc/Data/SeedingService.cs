@@ -31,11 +31,11 @@ namespace SalesWebMvc.Data
             Department d4 = new Department(4, "Books");
 
             Seller s1 = new Seller(1, "Bob Brown", "bob@gmail.com", new DateTime(1995, 10, 3), 1000.0, d1);
-            Seller s2 = new Seller(1, "Maria Brown", "maria@gmail.com", new DateTime(1999, 4, 3), 2000.0, d2);
-            Seller s3 = new Seller(1, "Julia Brown", "julia@gmail.com", new DateTime(2001, 7, 3), 1500.0, d3);
-            Seller s4 = new Seller(1, "Velma Brown", "velma@gmail.com", new DateTime(2003, 9, 3), 10000.0, d4);
-            Seller s5 = new Seller(1, "Alexander Brown", "alexander@gmail.com", new DateTime(1975, 1, 3), 12000.0, d2);
-            Seller s6 = new Seller(1, "Elton Brown", "elton@gmail.com", new DateTime(1948, 12, 3), 1000.0, d1);
+            Seller s2 = new Seller(2, "Maria Brown", "maria@gmail.com", new DateTime(1999, 4, 3), 2000.0, d2);
+            Seller s3 = new Seller(3, "Julia Brown", "julia@gmail.com", new DateTime(2001, 7, 3), 1500.0, d3);
+            Seller s4 = new Seller(4, "Velma Brown", "velma@gmail.com", new DateTime(2003, 9, 3), 10000.0, d4);
+            Seller s5 = new Seller(5, "Alexander Brown", "alexander@gmail.com", new DateTime(1975, 1, 3), 12000.0, d2);
+            Seller s6 = new Seller(6, "Elton Brown", "elton@gmail.com", new DateTime(1948, 12, 3), 1000.0, d1);
 
             SalesRecord r1 = new SalesRecord(1, new DateTime(2018, 09, 25), 11000.0, SaleStatus.Billed, s1);
             SalesRecord r2 = new SalesRecord(2, new DateTime(2018, 09, 4), 7000.0, SaleStatus.Billed, s5);
@@ -69,7 +69,9 @@ namespace SalesWebMvc.Data
             SalesRecord r30 = new SalesRecord(30, new DateTime(2018, 10, 12), 5000.0, SaleStatus.Billed, s2);
 
             _context.Department.AddRange(d1, d2, d3, d4);
+
             _context.Seller.AddRange(s1, s2, s3, s4, s5, s6);
+
             _context.SalesRecord.AddRange(
                 r1, r2, r3, r4, r5, r6, r7, r8, r9, r10,
                 r11, r12, r13, r14, r15, r16, r17, r18, r19, r20,
